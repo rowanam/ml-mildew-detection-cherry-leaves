@@ -1,16 +1,15 @@
 # Cherry Leaf Mildew Detection
 
 ## Dataset Content
+
 * The dataset is sourced from [Kaggle](https://www.kaggle.com/codeinstitute/cherry-leaves). We then created a fictitious user story where predictive analytics can be applied in a real project in the workplace.
 * The dataset contains over 4,000 images taken from the client's crop fields. The images show healthy cherry leaves and cherry leaves that have powdery mildew, a fungal disease that affects many plant species. The cherry plantation crop is one of the finest products in their portfolio, and the company is concerned about supplying the market with a compromised quality product.
 
-
-
 ## Business Requirements
+
 The cherry plantation crop from Farmy & Foods is facing a challenge where their cherry plantations have been presenting powdery mildew. Currently, the process is manual verification if a given cherry tree contains powdery mildew. An employee spends around 30 minutes in each tree, taking a few samples of tree leaves and verifying visually if the leaf tree is healthy or has powdery mildew. If there is powdery mildew, the employee applies a specific compound to kill the fungus. The time spent applying this compound is 1 minute.  The company has thousands of cherry trees, located on multiple farms across the country. As a result, this manual process is not scalable due to the time spent in the manual process inspection.
 
 To save time in this process, the IT team suggested an ML system that detects instantly, using a leaf tree image, if it is healthy or has powdery mildew. A similar manual process is in place for other crops for detecting pests, and if this initiative is successful, there is a realistic chance to replicate this project for all other crops. The dataset is a collection of cherry leaf images provided by Farmy & Foods, taken from their crops.
-
 
 * 1 - The client is interested in conducting a study to visually differentiate a healthy cherry leaf from one with powdery mildew.
 * 2 - The client is interested in predicting if a cherry leaf is healthy or contains powdery mildew.
@@ -19,6 +18,7 @@ To save time in this process, the IT team suggested an ML system that detects in
 ## Hypothesis and how to validate?
 
 * Cherry leaves with powdery mildew will have significant visual differences that will allow classification by a neural network. The precense of visual differences can be validated through average and variability image studies.
+* Since powdery mildew appears as white texture on the surface of the leaf, it is hypothesized that leaves with the fungus will have greater variability. This can be validated with the variability image studies.
 
 ## The rationale to map the business requirements to the Data Visualisations and ML tasks
 
@@ -46,19 +46,25 @@ Business requirement 2: **Classifiication**
 
 ## Dashboard Design (Streamlit)
 
-### Page 1: Project Summary
+### Page 1: Introduction
 
-* General information
+* Brief outline of project goals and dashboard content
+
+### Page 2: Project Summary
+
+* General project information
+* Business case and requirements
 * Project dataset information
-* Business requirements
 
-### Page 2: Images Study
+### Page 3: Images Study
 
-* Checkbox 1 - Image montage
-* Checkbox 2 - Average and variability images
-* Checkbox 3 - Difference between average infected and healthy images
+* Outline of images study
+* Checkboxes for each study
+    - Image montage
+    - Average and variability images
+    - Difference between average infected and healthy images
 
-### Page 3: Powdery Mildew Detector
+### Page 4: Powdery Mildew Detector
 
 * Link to download a set of sample images for prediction testing
 * Mildew detection
@@ -66,12 +72,12 @@ Business requirement 2: **Classifiication**
     - Outputs image display with a statement of predicted class and associated probability
     - A button to download the results as a table
 
-### Project Hypothesis and Validation
+### Page 5: Project Hypothesis and Validation
 
 * Cherry leaves with powdery mildew will have significant visual differences that will allow classification by a neural network.
     - Validations and conclusion
 
-### Page 5: ML Performance Metrics
+### Page 6: ML Performance Metrics
 
 * Label frequencies for train, validation and test sets
 * Model training history comparing train and validation sets
@@ -79,8 +85,6 @@ Business requirement 2: **Classifiication**
     - Accuracy plot
 * Model evaluation result
     - Confusion matrix
-
-### 
 
 ## Unfixed Bugs
 
