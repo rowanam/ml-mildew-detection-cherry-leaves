@@ -13,14 +13,18 @@ from src.machine_learning.predictive_analysis import (
 def page_leaf_health_prediction_body():
     st.write("## Leaf Health Predictor")
 
-    st.info(
-        f"* The client is interested in predicting if a cherry leaf is healthy or contains "
-        f"powdery mildew."
+    st.write(
+        "Upload cherry leaf images to generate predictions of whether or not they contain powdery mildew."
+    )
+    st.write(
+        "One or multiple images can be added using the file uploader below. To get a sample of images to test the live prediction, download the images from the dataset, [here](https://www.kaggle.com/datasets/codeinstitute/cherry-leaves)."
+    )
+    st.write(
+        'After running the predictions, you can download the outputs by clicking the "Download Report" button.'
     )
 
-    st.write(
-        f"* You can download a set of cherry leaf images for live prediction. "
-        f"You can download the images from [here](https://www.kaggle.com/datasets/codeinstitute/cherry-leaves)."
+    st.info(
+        "This page relates to business requirement 2 - *The client is interested in predicting if a cherry leaf is healthy or contains powdery mildew.*"
     )
 
     st.write("---")
