@@ -15,10 +15,17 @@ To save time in this process, the IT team suggested an ML system that detects in
 * 2 - The client is interested in predicting if a cherry leaf is healthy or contains powdery mildew.
 
 
-## Hypothesis and how to validate?
+## Hypotheses and how to validate?
 
-* Cherry leaves with powdery mildew will have significant visual differences that will allow classification by a neural network. The precense of visual differences can be validated through average and variability image studies.
-* Since powdery mildew appears as white texture on the surface of the leaf, it is hypothesized that leaves with the fungus will have greater variability. This can be validated with the variability image studies.
+**Cherry leaves with and without powdery mildew will have significant visual differences that will allow classification by a neural network.**
+
+* The presence of visual differences can be investigated through visual inspection of sample image montages and average and variability image studies.
+* The hypothesis will be validated if the neural network model is able to make predictions of leaf health to a high degree of accuracy.
+
+**Images of leaves with powdery mildew will have greater color variability.**
+
+* Since healthy leaves tend to have a fairly uniform green color, while leaves with powdery mildew additionally present with white coloration, it is hypothesized that analysis of the variability of pixels in the images will reveal that the latter has higher variability.
+* This can be validated through variability image studies.
 
 ## The rationale to map the business requirements to the Data Visualisations and ML tasks
 
@@ -74,17 +81,24 @@ Business requirement 2: **Classifiication**
 
 ### Page 5: Project Hypothesis and Validation
 
-* Cherry leaves with powdery mildew will have significant visual differences that will allow classification by a neural network.
-    - Validations and conclusion
+Visual Differences:
+
+* Hypothesis: Cherry leaves with and without powdery mildew will have significant visual differences that will allow classification by a neural network.
+* Justification, validations and conclusion
+
+Greater Variabilty in Powdery Mildew Leaves:
+
+* Hypothesis: Images of leaves with powdery mildew will have greater color variability.
+* Justification, validations and conclusion
 
 ### Page 6: ML Performance Metrics
 
-* Label frequencies for train, validation and test sets
+* Label distributions for train, validation and test sets
 * Model training history comparing train and validation sets
-    - Loss plot
     - Accuracy plot
+    - Loss plot
 * Model evaluation result
-    - Confusion matrix
+    - Test set loss and accuracy
 
 ## Unfixed Bugs
 
