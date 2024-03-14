@@ -26,3 +26,6 @@ def page_summary_body():
     st.write("The dataset used in this project contains over 4,000 images taken from the client's crop fields. The images show healthy cherry leaves and cherry leaves that have powdery mildew.")
 
     st.write("The full dataset can be found here: [cherry leaves dataset](https://www.kaggle.com/datasets/codeinstitute/cherry-leaves).")
+
+    st.write("---")
+    st.write("*For more project information, see the [project README](https://github.com/rowanam/ml-mildew-detection-cherry-leaves) on GitHub.*")

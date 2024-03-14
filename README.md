@@ -7,7 +7,7 @@ It has 2 main goals:
 * Undertake a visual study of healthy and powdery mildew-containing cherry leaves to understand the differences
 * Predict whether or not a cherry leaf has powdery mildew from real-time passed images
 
-The outputs of this project can be viewed on a dashboard - the live link is HERE.
+The outputs of this project can be viewed on a dashboard - the live link is [here](https://cherry-leaf-health-2ff1edcf83ab.herokuapp.com/).
 
 ## Dataset Content
 
@@ -118,7 +118,7 @@ No bugs were found during testing.
 
 ### Heroku
 
-* The App live link is: https://YOUR_APP_NAME.herokuapp.com/ 
+* The app live link is here: [Cherry Leaf Health Dashboard](https://cherry-leaf-health-2ff1edcf83ab.herokuapp.com/)
 * Set the runtime.txt Python version to a [Heroku-20](https://devcenter.heroku.com/articles/python-support#supported-runtimes) stack currently supported version.
 * The project was deployed to Heroku using the following steps.
 
