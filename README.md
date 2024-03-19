@@ -38,7 +38,7 @@ To save time in this process, the IT team suggested an ML system that detects in
 
 **Hypothesis: The central portions of the images are more likely to contain only leaf surface without the background, and in this portion powdery mildew leaf images will display greater variability than the centers of the healthy images.**
 
-* Following variability analyses related to the previous hypothesis, it was found that variability was not greater in the powdery mildew images when using the entire images. Since this may be due to differences in the background and not the leaves themselves, a further hypothesis was tested. From visually inspecting the images, the leaves tend to be centered and take up most of the images. Therefore, narrowing the study to only the central portions, for example approximately the central thirds, of the images is more likely to capture only the leaf surfaces without the background. It is hypothesized that these portions of the images will contain greater variability in powdery mildew leaf images.
+* Following variability analyses related to the previous hypothesis, it was found that variability was not greater in the powdery mildew images when using the entire images. Since this could be due to differences in the background and not the leaves themselves (see the Project Limitations section below), a further hypothesis was tested. From visually inspecting the images, the leaves tend to be centered and take up most of the images. Therefore, narrowing the study to only the central portions, for example approximately the central thirds, of the images is more likely to capture only the leaf surfaces without the background. It is hypothesized that these portions of the images will contain greater variability in powdery mildew leaf images.
 * This can be validated through:
     - observing the color distributions in these portions of the images and comparing them to the full images
     - comparing variability within the images between the two classes, with the analysis restricted to (approximately) the central thirds of the images
@@ -127,10 +127,13 @@ The model was trained using only images of healthy and powdery mildew-containing
 
 It was noted during the images study that there may be some qualitative differences between the images of each class in the provided dataset. The differences observed include:
 
-- Powdery mildew leaves seem to point upward more often, while healthy leaves point up or down
-- Potential differences in background or image quality. This was seen in visual inspection and also during analysis of variability in the images, where healthy leaf images displayed higher variability than powdery mildew leaves, contrary to expectations. Furthermore, there were significant differences in the distributions between the two classes, and these distributions became more similar when the background was mostly removed from the analysis.
+* Powdery mildew leaves seem to point upward more often, while healthy leaves point up or down
+* Potential differences in background or image quality. This was seen in -
+    - visual inspection of the images
+    - plotting the difference between the average of the healthy and the average of the powdery mildew leaf images. In the individual plots, you can observe that the background of the healthy leaf images is on average lighter than in powedery mildew leaf images. Consequently, the difference plot of the two average images displays some light around the edges of the leaf shape.
+    - analysis of variability in the images, where healthy leaf images displayed higher variability than powdery mildew leaves, contrary to expectations. Furthermore, there were significant differences in the distributions between the two classes, but these distributions became less different when the background was mostly removed from the analysis.
 
-While this is not conclusive evidence of a quality problem in the dataset, it is an indication that there is a potential issue. The model should continue to be evaluated for performance on real-time data, and if prediction accuracy becomes lower, this would be an avenue to explore.
+While this is not conclusive evidence of a quality problem in the dataset, it is an indication that there could be an issue. The model should continue to be evaluated for performance on real-time data, and if prediction accuracy becomes lower, this would be an avenue to explore.
 
 ## Unfixed Bugs
 

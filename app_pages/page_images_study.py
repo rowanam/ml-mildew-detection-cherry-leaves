@@ -103,7 +103,7 @@ def page_images_study_body():
 
         st.write("Although it was predicted that powdery mildew-containing images would have higher variability due to the presence of white coloration on the leaves, in the table it can be seen that healthy leaf images have on average higher variability in every color channel.")
 
-        st.write("To investigate whether this was the effect of a difference in background color as opposed to the leaves themselves, the analysis was repeated on only the central portions of the images.")
+        st.write("In the average image studies above, it can be observed that the backgrounds are slightly different between the two classes (specifically, that the healthy leaves have on average a lighter background). To investigate whether the unexpected results in this variability study were the effect of a difference in background color as opposed to the leaves themselves, the analysis was repeated on only the central portions of the images.")
 
 
         st.write("### Central portions of images")

@@ -30,12 +30,17 @@ def page_project_hypotheses_body():
 
     st.write("---")
 
-    st.write("### Higher Leaf Proportion and Thus Greater Variabilty in Central Portion of Powdery Mildew Leaf Images")
+    st.write(
+        "### Higher Leaf Proportion and Thus Greater Variabilty in Central Portion of Powdery Mildew Leaf Images"
+    )
     st.success(
         "*Hypothesis*: The central portions of the images are more likely to contain only leaf surface without the background, and in this portion powdery mildew leaf images will display greater variability than the centers of the healthy images."
     )
     st.write(
-        "Following variability analyses related to the previous hypothesis, it was found that variability was not greater in the powdery mildew images when using the entire images. Since this may be due to differences in the background and not the leaves themselves, a further hypothesis was tested. From visually inspecting the images, the leaves tend to be centered and take up most of the images. Therefore, narrowing the study to only the central portions, for example approximately the central thirds, of the images is more likely to capture only the leaf surfaces without the background. It is hypothesized that these portions of the images will contain greater variability in powdery mildew leaf images."
+        "Following variability analyses related to the previous hypothesis, it was found that variability was not greater in the powdery mildew images when using the entire images. A potential explanation for this result is that there might be differences in the background between the two classes of images. This possibility is raised for example by the average image studies (see Images Study page), which reveal a slightly lighter average background color in healthy leaf images."
+    )
+    st.write(
+        "To investigate whether the unexpected result of the variability study was due to differences in the background and not the leaves themselves, a further hypothesis was tested. From visually inspecting the images, the leaves tend to be centered and take up most of the images. Therefore, narrowing the study to only the central portions, for example approximately the central thirds, of the images is more likely to capture only the leaf surfaces without the background. It is hypothesized that these portions of the images will contain greater variability in powdery mildew leaf images."
     )
     st.write(
         "This hypothesis is likely correct. When the analysis was restricted to the central thirds of the leaf images, the averages values of green in the pixels of the healthy images increased significantly, providing at least one indication that these portions contain leaf surface and less background. In these portions of the images, the variability was higher across all color channels within the powdery mildew leaf images, as predicted. However, the difference was relatively small and thus not strong enough to conclusively validate the hypothesis."
