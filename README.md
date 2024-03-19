@@ -24,7 +24,6 @@ To save time in this process, the IT team suggested an ML system that detects in
 * 1 - The client is interested in conducting a study to visually differentiate a healthy cherry leaf from one with powdery mildew.
 * 2 - The client is interested in predicting if a cherry leaf is healthy or contains powdery mildew.
 
-
 ## Hypotheses and how to validate?
 
 **Hypothesis: Cherry leaves with and without powdery mildew will have significant visual differences that will allow classification by a neural network.**
@@ -55,6 +54,7 @@ Business requirement 1: **Data Visualization**
 Business requirement 2: **Classifiication**
 
 * Give the client the ability to upload a leaf image and generate a prediction of whether it has powdery mildew or not
+* Provide a report of the images and predictions that can be downloaded
 
 ## ML Business Case
 

@@ -12,7 +12,7 @@ def page_project_hypotheses_body():
         "Visual inspection of samples of each class of leaves reveals that powdery mildew-containing leaves tend to have white spots on their surfaces. Though the average and variability plots were relativly similar, there was a visible occurence of white spots in the average powdery mildew image and more texture in the variability plot."
     )
     st.write(
-        "This hypothesis proved correct, as there was enough visual differentiation between the image classes to train a model with very high accuracy (over the 97% requirement) in distinguishing healthy and powdery mildew-containing leaves."
+        "This hypothesis proved correct, as there was enough visual differentiation between the image classes to train a model with very high accuracy (over the 97% accuracy requirement) in distinguishing healthy and powdery mildew-containing leaves."
     )
 
     st.write("---")

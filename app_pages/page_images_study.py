@@ -47,7 +47,7 @@ def page_images_study_body():
         st.write("---")
 
     # average and variability checkbox
-    if st.checkbox("Average and variability of class images"):
+    if st.checkbox("Average and variability of each class"):
         avg_var_healthy = plt.imread(f"outputs/{version}/avg_var_healthy.png")
         avg_var_powdery_mildew = plt.imread(
             f"outputs/{version}/avg_var_powdery_mildew.png"
@@ -68,11 +68,11 @@ def page_images_study_body():
         st.write("---")
 
     # difference between averages checkbox
-    if st.checkbox("Difference between average images"):
+    if st.checkbox("Difference between average healthy and average powdery mildew images"):
         avg_diff = plt.imread(f"outputs/{version}/avg_diff.png")
 
         st.write(
-            "Subtracting the average of one image class from the other did not reveal significant insights."
+            "Subtracting the average of the powdery mildew images from the average of the healthy images did not reveal significant insights into patterns on the leaf surface. There are slight visible differences in leaf shape and background."
         )
         st.image(avg_diff)
     
