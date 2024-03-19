@@ -117,6 +117,21 @@ Greater Variabilty in Powdery Mildew Leaves:
 * Model evaluation result
     - Test set loss and accuracy
 
+## Project Limitations
+
+### Non-leaf images
+
+The model was trained using only images of healthy and powdery mildew-containing cherry leaves. Therefore, passing any other type of image will lead the model to output a "prediction" of one of these classes, even though this would have no relevance for the image.
+
+### Image dataset quality
+
+It was noted during the images study that there may be some qualitative differences between the images of each class in the provided dataset. The differences observed include:
+
+- Powdery mildew leaves seem to point upward more often, while healthy leaves point up or down
+- Potential differences in background or image quality. This was seen in visual inspection and also during analysis of variability in the images, where healthy leaf images displayed higher variability than powdery mildew leaves, contrary to expectations. Furthermore, there were significant differences in the distributions between the two classes, and these distributions became more similar when the background was mostly removed from the analysis.
+
+While this is not conclusive evidence of a quality problem in the dataset, it is an indication that there is a potential issue. The model should continue to be evaluated for performance on real-time data, and if prediction accuracy becomes lower, this would be an avenue to explore.
+
 ## Unfixed Bugs
 
 No bugs were found during testing.

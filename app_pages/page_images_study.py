@@ -22,7 +22,7 @@ def page_images_study_body():
         "View a random sample of images from each class in the image montage section. Explore the various image analyses in the other sections."
     )
 
-    st.info(
+    st.success(
         "This page relates to business requirement 1 - *The client is interested in conducting a study to visually differentiate a healthy cherry leaf from one with powdery mildew.*"
     )
 
