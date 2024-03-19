@@ -43,13 +43,14 @@ To save time in this process, the IT team suggested an ML system that detects in
     - observing the color distributions in these portions of the images and comparing them to the full images
     - comparing variability within the images between the two classes, with the analysis restricted to (approximately) the central thirds of the images
 
-## The rationale to map the business requirements to the Data Visualisations and ML tasks
+## The rationale to map the business requirements to the Data Visualizations and ML tasks
 
 Business requirement 1: **Data Visualization**
 
 * Display image montages for healthy and powdery mildew cherry leaves
 * Display images showing the average and standard deviation of each image class
 * Display an image showing the difference between the two average images
+* Display plots showing variability within the images of each class
 
 Business requirement 2: **Classifiication**
 
