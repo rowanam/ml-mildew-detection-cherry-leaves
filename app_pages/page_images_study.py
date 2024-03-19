@@ -1,13 +1,13 @@
-import streamlit as st
 import os
+import itertools
+import random
+import streamlit as st
 import pandas as pd
 import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
 from matplotlib.image import imread
 
-import itertools
-import random
 
 from src.data_management import load_pkl_file
 
