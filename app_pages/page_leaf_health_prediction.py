@@ -14,20 +14,29 @@ def page_leaf_health_prediction_body():
     st.write("## Leaf Health Predictor")
 
     st.write(
-        "Upload cherry leaf images to generate predictions of whether or not they contain powdery mildew."
+        """Upload cherry leaf images to generate predictions of whether or 
+        not they contain powdery mildew."""
     )
     st.info(
-        "*Note:* the model used here was trained only on healthy or powdery mildew-containing cherry leaves. If any other type of image is uploaded, it will still generate a prediction of one of these classes, even though this wouldn't be relevant to that image."
+        """*Note:* the model used here was trained only on healthy or powdery 
+        mildew-containing cherry leaves. If any other type of image is uploaded, 
+        it will still generate a prediction of one of these classes, even though 
+        this wouldn't be relevant to that image."""
     )
     st.write(
-        "One or multiple images can be added using the file uploader below. To get a sample of images to test the live prediction, download the images from the dataset, [here](https://www.kaggle.com/datasets/codeinstitute/cherry-leaves)."
+        """One or multiple images can be added using the file uploader below. To 
+        get a sample of images to test the live prediction, download the images 
+        from the dataset, 
+        [here](https://www.kaggle.com/datasets/codeinstitute/cherry-leaves)."""
     )
     st.write(
-        'After running the predictions, you can download the outputs by clicking the "Download Report" button.'
+        """After running the predictions, you can download the outputs by clicking 
+        the 'Download Report' button."""
     )
 
     st.success(
-        "This page relates to business requirement 2 - *The client is interested in predicting if a cherry leaf is healthy or contains powdery mildew.*"
+        """This page relates to business requirement 2 - *The client is interested 
+        in predicting if a cherry leaf is healthy or contains powdery mildew.*"""
     )
 
     st.write("---")
@@ -51,7 +60,7 @@ def page_leaf_health_prediction_body():
             )
 
             version = "v1"
-            resized_img = resize_input_image(img=img_pil, version=version)
+            resized_img = resize_input_image(img=img_pil)
             pred_proba, pred_class = load_model_and_predict(
                 resized_img, version=version
             )
