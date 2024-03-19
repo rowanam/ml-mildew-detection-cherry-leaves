@@ -82,13 +82,27 @@ Business requirement 2: **Classifiication**
 
 ### Page 3: Images Study
 
+This page relates to business requirement 1 - *The client is interested in conducting a study to visually differentiate a healthy cherry leaf from one with powdery mildew.*
+
 * Outline of images study
 * Checkboxes for each study
     - Image montage
+        - Label dropdown
+        - Montage creation button
     - Average and variability images
-    - Difference between average infected and healthy images
+        - Average and variability plots for healthy leaves
+        - Average and variability plots for powdery mildew leaves
+    - Difference between average healthy and powdery mildew-containing images
+        - Dfference between averages plot
+    - Variability within images
+        - Histograms of rgb channel variability for healthy and powdery mildew full images
+        - Table of average rgb channel variabilities for healthy and powdery mildew full images
+        - Histograms of rgb channel variability for healthy and powdery mildew centers of images
+        - Table of average rgb channel variabilities for healthy and powdery mildew centers of images
 
 ### Page 4: Powdery Mildew Detector
+
+This page relates to business requirement 2 - *The client is interested in predicting if a cherry leaf is healthy or contains powdery mildew.*
 
 * Link to download a set of sample images for prediction testing
 * Mildew detection
@@ -98,15 +112,20 @@ Business requirement 2: **Classifiication**
 
 ### Page 5: Project Hypothesis and Validation
 
-Visual Differences:
+* Model Can be Created from Visual Differences
 
-* Hypothesis: Cherry leaves with and without powdery mildew will have significant visual differences that will allow classification by a neural network.
-* Justification, validations and conclusion
+    - Hypothesis: Cherry leaves with and without powdery mildew will have significant visual differences that will allow classification by a neural network.
+    - Justification, validations and conclusion
 
-Greater Variabilty in Powdery Mildew Leaves:
+* Greater Variabilty in Powdery Mildew Leaf Images:
 
-* Hypothesis: Images of leaves with powdery mildew will have greater color variability.
-* Justification, validations and conclusion
+    - Hypothesis: Images of leaves with powdery mildew will have greater color variability.
+    - Justification, validations and conclusion
+
+* Higher Leaf Proportion and Thus Greater Variabilty in Central Portion of Powdery Mildew Leaf Images
+
+    - Hypothesis: The central portions of the images are more likely to contain only leaf surface without the background, and in this portion powdery mildew leaf images will display greater variability than the centers of the healthy images.
+    - Justification, validations and conclusion
 
 ### Page 6: ML Performance Metrics
 
@@ -119,7 +138,7 @@ Greater Variabilty in Powdery Mildew Leaves:
 
 ## Project Limitations
 
-### Non-leaf images
+### Non-cherry-leaf images
 
 The model was trained using only images of healthy and powdery mildew-containing cherry leaves. Therefore, passing any other type of image will lead the model to output a "prediction" of one of these classes, even though this would have no relevance for the image.
 
