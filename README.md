@@ -75,33 +75,51 @@ Business requirement 2: **Classifiication**
 
 * Brief outline of project goals and dashboard content
 
+![Introduction page](documentation/images/page_introduction.png)
+
 ### Page 2: Project Summary
 
 * General project information
 * Business case and requirements
 * Project dataset information
 
+![Project summary page](documentation/images/page_summary.png)
+
 ### Page 3: Images Study
 
 This page relates to business requirement 1 - *The client is interested in conducting a study to visually differentiate a healthy cherry leaf from one with powdery mildew.*
 
-* Outline of images study
-* Checkboxes for each study
-    - Image montage
-        - Label dropdown
-        - Montage creation button
-    - Average and variability images
-        - Average and variability plots for healthy leaves
-        - Average and variability plots for powdery mildew leaves
-    - Difference between average healthy and powdery mildew-containing images
-        - Dfference between averages plot
-    - Variability within images
-        - Histograms of rgb channel variability for healthy and powdery mildew full images
-        - Table of average rgb channel variabilities for healthy and powdery mildew full images
-        - Histograms of rgb channel variability for healthy and powdery mildew centers of images
-        - Table of average rgb channel variabilities for healthy and powdery mildew centers of images
+* Outline of image studies
 
-### Page 4: Powdery Mildew Detector
+![Images study page](documentation/images/page_images_study.png)
+
+Checkboxes for each study -
+* Image montage
+    - Label dropdown
+    - Montage creation button
+
+![Image montages checkbox](documentation/images/checkbox_montage.png)
+
+* Average and variability images
+    - Average and variability plots for healthy leaves
+    - Average and variability plots for powdery mildew leaves
+
+![Average and variability images checkbox](documentation/images/checkbox_av_var.png)
+
+* Difference between average healthy and powdery mildew-containing images
+    - Dfference between averages plot
+
+![Difference between averages checkbox](documentation/images/checkbox_av_diff.png)
+
+* Variability within images
+    - Histograms of rgb channel variability for healthy and powdery mildew full images
+    - Table of average rgb channel variabilities for healthy and powdery mildew full images
+    - Histograms of rgb channel variability for healthy and powdery mildew centers of images
+    - Table of average rgb channel variabilities for healthy and powdery mildew centers of images
+
+![Variability within images checkbox](documentation/images/checkbox_var_within_images.png)
+
+### Page 4: Leaf Health Predictor
 
 This page relates to business requirement 2 - *The client is interested in predicting if a cherry leaf is healthy or contains powdery mildew.*
 
@@ -110,6 +128,8 @@ This page relates to business requirement 2 - *The client is interested in predi
     - A file uploader widget
     - Outputs image display with a statement of predicted class and associated probability
     - A button to download the results as a table
+
+![Leaf health prediction page](documentation/images/page_leaf_health_prediction.png)
 
 ### Page 5: Project Hypothesis and Validation
 
@@ -128,6 +148,8 @@ This page relates to business requirement 2 - *The client is interested in predi
     - Hypothesis: The central portions of the images are more likely to contain only leaf surface without the background, and in this portion powdery mildew leaf images will display greater variability than the centers of the healthy images.
     - Justification, validations and conclusion
 
+![Project hypotheses page](documentation/images/page_project_hypotheses.png)
+
 ### Page 6: ML Performance Metrics
 
 * Label distributions for train, validation and test sets
@@ -136,6 +158,8 @@ This page relates to business requirement 2 - *The client is interested in predi
     - Loss plot
 * Model evaluation result
     - Test set loss and accuracy
+
+![ML performance metrics page](documentation/images/page_ml_performance_metrics.png)
 
 ## Project Limitations
 
