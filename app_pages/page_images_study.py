@@ -32,7 +32,8 @@ def page_images_study_body():
 
     # image montage checkbox
     if st.checkbox("Sample image montage"):
-        st.write("* To refresh the montage, click on the 'Create Montage' button")
+        st.write("Select a label using the dropdown box below.")
+        st.write("To generate (or refresh) the montage, click on the 'Create Montage' button")
         data_dir = "inputs/datasets/cherry-leaves"
         labels = os.listdir(data_dir + "/validation")
         label_to_display = st.selectbox(label="Select label", options=labels, index=0)
