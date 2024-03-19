@@ -9,6 +9,8 @@ from matplotlib.image import imread
 import itertools
 import random
 
+from src.data_management import load_pkl_file
+
 
 def page_images_study_body():
     st.write("## Images Study")
@@ -73,6 +75,58 @@ def page_images_study_body():
             "Subtracting the average of one image class from the other did not reveal significant insights."
         )
         st.image(avg_diff)
+    
+    # variability within images checkbox
+    if st.checkbox("Variability within images"):
+        st.write("As seen in the variability images in a previous section above, powdery mildew leaf images appear to have greater variability between different images than healthy leaves.")
+        st.write("Variability differences between the two classes were further investigated by examining the variability of the pixel values within individual images.")
+
+        st.write("### Full images")
+
+        st.write(
+            "For each image, the variability of the values within each RGB channel was calculated. The distributions of these values for each class (healthy or powdery mildew leaf images) are displayed in the histograms below, colored by red, green or blue for the appropriate channel."
+        )
+        col1, col2 = st.beta_columns(2)
+        with col1:
+            pixel_var_healthy = plt.imread(f"outputs/{version}/rgb_pixel_var_healthy.png")
+            st.image(pixel_var_healthy, caption="Healthy")
+        with col2:
+            pixel_var_mildew = plt.imread(f"outputs/{version}/rgb_pixel_var_powdery_mildew.png")
+            st.image(pixel_var_mildew, caption="Powdery Mildew")
+        
+        st.write(
+            "The average variability for each channel is displayed in the table below."
+        )
+        st.dataframe(
+            pd.DataFrame(load_pkl_file(f"outputs/{version}/rgb_pixel_var_avgs.pkl"))
+        )
+
+        st.write("Although it was predicted that powdery mildew-containing images would have higher variability due to the presence of white coloration on the leaves, in the table it can be seen that healthy leaf images have on average higher variability in every color channel.")
+
+        st.write("To investigate whether this was the effect of a difference in background color as opposed to the leaves themselves, the analysis was repeated on only the central portions of the images.")
+
+
+        st.write("### Central portions of images")
+
+        st.write(
+            "Approximately the central third (the middle 80 x 80 pixels of each 256 x 256 image) from each image to repeat the variability analysis above. The distributions are displayed in the histograms below, colored by red, green or blue for the appropriate channel."
+        )
+        col1, col2 = st.beta_columns(2)
+        with col1:
+            pixel_var_healthy_center = plt.imread(f"outputs/{version}/rgb_pixel_var_center_healthy.png")
+            st.image(pixel_var_healthy_center, caption="Healthy")
+        with col2:
+            pixel_var_mildew_center = plt.imread(f"outputs/{version}/rgb_pixel_var_center_powdery_mildew.png")
+            st.image(pixel_var_mildew_center, caption="Powdery Mildew")
+        
+        st.write(
+            "The average variability for each channel is displayed in the table below."
+        )
+        st.dataframe(
+            pd.DataFrame(load_pkl_file(f"outputs/{version}/rgb_pixel_var_avgs_center.pkl"))
+        )
+
+        st.write("In this study, the powdery mildew leaves displayed higher variability (across all channels), as predicted. This provides an indication that one of the defining features of images containing powdery mildew leaves is higher color variability. However, the difference is relatively small, and taken together with the results from the full image analysis, variability alone is not a significant enough indicator of leaf health.")
 
 
 def image_montage(dir_path, label_to_display, nrows, ncols, figsize=(15, 10)):
