@@ -27,15 +27,22 @@ To save time in this process, the IT team suggested an ML system that detects in
 
 ## Hypotheses and how to validate?
 
-**Cherry leaves with and without powdery mildew will have significant visual differences that will allow classification by a neural network.**
+**Hypothesis: Cherry leaves with and without powdery mildew will have significant visual differences that will allow classification by a neural network.**
 
 * The presence of visual differences can be investigated through visual inspection of sample image montages and average and variability image studies.
-* The hypothesis will be validated if the neural network model is able to make predictions of leaf health to a high degree of accuracy.
+* The hypothesis will be validated if the neural network model is able to make predictions of leaf health to a level of 97% accuracy.
 
-**Images of leaves with powdery mildew will have greater color variability.**
+**Hypothesis: Images of leaves with powdery mildew will have greater color variability.**
 
-* Since healthy leaves tend to have a fairly uniform green color, while leaves with powdery mildew additionally present with white coloration, it is hypothesized that analysis of the variability of pixels in the images will reveal that the latter has higher variability.
-* This can be validated through variability image studies.
+* Since healthy leaves tend to have a fairly uniform green color, while leaves with powdery mildew additionally present with white coloration, it is hypothesized that analysis of the variability of pixels in the images will reveal that the latter has higher variability, both between different images of the same class and within individual images.
+* This can be validated through variability image studies between and within images, comparing the two classes.
+
+**Hypothesis: The central portions of the images are more likely to contain only leaf surface without the background, and in this portion powdery mildew leaf images will display greater variability than the centers of the healthy images.**
+
+* Following variability analyses related to the previous hypothesis, it was found that variability was not greater in the powdery mildew images when using the entire images. Since this may be due to differences in the background and not the leaves themselves, a further hypothesis was tested. From visually inspecting the images, the leaves tend to be centered and take up most of the images. Therefore, narrowing the study to only the central portions, for example approximately the central thirds, of the images is more likely to capture only the leaf surfaces without the background. It is hypothesized that these portions of the images will contain greater variability in powdery mildew leaf images.
+* This can be validated through:
+    - observing the color distributions in these portions of the images and comparing them to the full images
+    - comparing variability within the images between the two classes, with the analysis restricted to (approximately) the central thirds of the images
 
 ## The rationale to map the business requirements to the Data Visualisations and ML tasks
 
