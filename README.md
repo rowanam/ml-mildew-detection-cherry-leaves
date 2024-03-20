@@ -126,7 +126,7 @@ This page relates to business requirement 2 - *The client is interested in predi
 * Link to download a set of sample images for prediction testing
 * Mildew detection
     - A file uploader widget
-    - Outputs image display with a statement of predicted class and associated probability
+    - Outputs image display with a statement of predicted class
     - A button to download the results as a table
 
 ![Leaf health prediction page](documentation/images/page_leaf_health_prediction.png)
@@ -179,9 +179,62 @@ It was noted during the images study that there may be some qualitative differen
 
 While this is not conclusive evidence of a quality problem in the dataset, it is an indication that there could be an issue. The model should continue to be evaluated for performance on real-time data, and if prediction accuracy becomes lower, this would be an avenue to explore.
 
+## Testing
+
+User testing was carried out on the deployed dashboard.
+
+### Dashboard user testing 
+
+#### Page 1: Introduction
+
+| Expectation                       | Met |
+| --------------------------------- | --- |
+| Page displays expected content | yes |
+
+#### Page 2: Project Summary
+
+| Expectation                       | Met |
+| --------------------------------- | --- |
+| Page displays expected content | yes |
+| Dataset link opens Kaggle cherry leaves dataset | yes |
+| Project README link opens project GitHub repository | yes |
+
+#### Page 3: Images Study
+
+| Expectation                       | Met |
+| --------------------------------- | --- |
+| Page displays expected content | yes |
+| Image montage can be generated for each label | yes |
+| All plots and tables outlined in Dashboard Design section load and display | yes |
+
+#### Page 4: Leaf Health Predictor
+
+| Expectation                       | Met |
+| --------------------------------- | --- |
+| Page displays expected content | yes |
+| Sample images link opens Kaggle cherry leaves dataset | yes |
+| One or multiple files can be uploaded | yes |
+| Only .jpg files can be uploaded | yes |
+| After uploading, the images are displayed along with their class predictions | yes |
+| A table summarizing the data is displayed | yes |
+| The table can be downloaded | yes |
+
+#### Page 5: Project Hypothesis and Validation
+
+| Expectation                       | Met |
+| --------------------------------- | --- |
+| Page displays expected content | yes |
+
+#### Page 6: ML Performance Metrics
+
+| Expectation                       | Met |
+| --------------------------------- | --- |
+| Page displays expected content | yes |
+| All plots and tables outlined in Dashboard Design section load and display | yes |
+
 ## Unfixed Bugs
 
-No bugs were found during testing.
+No unfixed bugs were found during testing.
 
 ## Deployment
 
