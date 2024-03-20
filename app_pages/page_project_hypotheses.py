@@ -49,9 +49,9 @@ def page_project_hypotheses_body():
 
     st.write("---")
 
+    # this text is displayed incorrectly if split across multiple lines
     st.write(
-        """### Higher Leaf Proportion and Thus Greater Variabilty in Central 
-        Portion of Powdery Mildew Leaf Images"""
+        """### Higher Leaf Proportion and Thus Greater Variabilty in Central Portion of Powdery Mildew Leaf Images"""
     )
     st.success(
         """*Hypothesis*: The central portions of the images are more likely 
