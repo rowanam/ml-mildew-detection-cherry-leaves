@@ -42,8 +42,8 @@ def page_leaf_health_prediction_body():
     st.write("---")
 
     images_buffer = st.file_uploader(
-        "Upload cherry leaf images. You can upload more than one.",
-        type=["png", "jpg"],
+        "Upload cherry leaf images (in .jpg format). You can upload more than one.",
+        type=["jpg"],
         accept_multiple_files=True,
     )
 
